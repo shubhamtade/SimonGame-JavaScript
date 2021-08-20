@@ -3,28 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simon Game - Shubham Tade</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Indie+Flower&display=swap"
-      rel="stylesheet"
-    />
-    <title>Simon - Shubham Tade</title>
   </head>
   <body>
-    <h1>Simon</h1>
-    <div class="scores">
-      <h3 class="current-score">Your Score: 0</h3>
-      <h3 class="message"></h3>
-      <h3 class="best-score">Best Score: 0</h3>
-    </div>
-    <div class="game-pad">
-      <button class="pad green" id="green"></button>
-      <button class="pad red" id="red"></button>
-      <button class="pad yellow" id="yellow"></button>
-      <button class="pad blue" id="blue"></button>
-    </div>
+    <main class="game">
+      <header>
+        <h1 class="heading js-heading">Simon Game</h1>
+      </header>
 
-    <button class="start input round roundA">START</button>
-    <script type="module" src="main.js"></script>
+      <section class="tile-container js-container unclickable">
+        <div class="tile tile-red" data-tile="red"></div>
+        <div class="tile tile-green" data-tile="green"></div>
+        <div class="tile tile-blue" data-tile="blue"></div>
+        <div class="tile tile-yellow" data-tile="yellow"></div>
+      </section>
+
+      <footer class="info-section">
+        <button class="start-button js-start">Start</button>
+        <span class="info js-info hidden"></span>
+      </footer>
+    </main>
+
+    <div class="hidden">
+      <audio
+        src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"
+        data-sound="red"
+      ></audio>
+      <audio
+        src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"
+        data-sound="green"
+      ></audio>
+      <audio
+        src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"
+        data-sound="blue"
+      ></audio>
+      <audio
+        src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"
+        data-sound="yellow"
+      ></audio>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>
